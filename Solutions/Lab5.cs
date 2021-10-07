@@ -197,5 +197,146 @@ namespace bootcamp.Solutions
             int m = int.Parse(Console.ReadLine());
             Console.WriteLine(d[dn] + "\n" + (m - c[dn])/500 + " " + ((m - c[dn])%500)/100);
         }
+        public void problem13()
+        {
+            var s = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+            if (s.Sum() > 100)
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+        }
+        public void problem14()
+        {
+            var s = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+            int sum = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                sum += s[i] * s[i];
+            }
+            if(sum/(s[0]*s[0]) == 2 || sum/(s[1]*s[1]) == 2 || sum/(s[2]*s[2]) == 2)
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+        }
+        public void problem15()
+        {
+            var b = Convert.ToChar(Console.Read());
+            if (b == '-' || b == '*' || b == '+' || b == '/' || b == '%')
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+        }
+        public void problem16()
+        {
+            int son = int.Parse(Console.ReadLine());
+            switch (son)
+            {
+                case 0:
+                    Console.WriteLine("nol");
+                    break;
+                case 1:
+                    Console.WriteLine("bir");
+                    break;
+                case 2:
+                    Console.WriteLine("ikki");
+                    break;
+                case 3:
+                    Console.WriteLine("uch");
+                    break;
+                case 4:
+                    Console.WriteLine("to'rt");
+                    break;
+                case 5:
+                    Console.WriteLine("besh");
+                    break;
+                case 6:
+                    Console.WriteLine("olti");
+                    break;
+                case 7:
+                    Console.WriteLine("yetti");
+                    break;
+                case 8:
+                    Console.WriteLine("sakkiz");
+                    break;
+                case 9:
+                    Console.WriteLine("to'qqiz");
+                    break;
+                default:
+                    Console.WriteLine("boshqa");
+                    break;
+            };
+        }
+        public void problem17()
+        {
+            var s = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+            if (s[1] >= 45)
+            {
+                s[1] -= 45;
+            }
+            else if (s[0] > 0)
+            {
+                s[0]--;
+                s[1] += 15;
+            }
+            else
+            {
+                s[0] += 23;
+                s[1] += 15;
+            }
+            Console.WriteLine(s[0].ToString("D2") + " " + s[1].ToString("D2"));
+        }
+        public void problem18()
+        {
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine( b switch
+            {
+                > 89 => "A",
+                > 79 => "B",
+                > 69 => "C",
+                > 59 => "D",
+                _ => "F"
+            });
+        }
+        public void problem19()
+        {
+            int p = int.Parse(Console.ReadLine());
+            Console.WriteLine(p % 1000 < 500 ? p / 1000 * 1000 : p / 1000 * 1000 + 1000);
+        }
+        public void problem20()
+        {
+            char l = Convert.ToChar(Console.Read());
+            if ((l >= 'A' && l <= 'Z') || (l >= 'a' && l <= 'z'))
+            {
+                Console.WriteLine(1);
+            }
+            else
+            {
+                Console.WriteLine(0);
+            }
+        }
+        public void problem21()
+        {
+            int son = int.Parse(Console.ReadLine());
+            if (son % 2 == 1)
+            {
+                Console.WriteLine("odd");
+            }
+            else
+            {
+                Console.WriteLine("even");
+            }
+        }
     }
 }

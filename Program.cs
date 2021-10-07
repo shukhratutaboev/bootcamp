@@ -55,6 +55,15 @@ namespace bootcamp
             // lab5Instance.problem9();
             // lab5Instance.problem10();
             // lab5Instance.problem11();
+            // lab5Instance.problem13();
+            // lab5Instance.problem14();
+            // lab5Instance.problem15();
+            // lab5Instance.problem16();
+            // lab5Instance.problem17();
+            // lab5Instance.problem18();
+            // lab5Instance.problem19();
+            // lab5Instance.problem20();
+            lab5Instance.problem21();
 
             var lab6Instance = new Lab6();
 
@@ -63,7 +72,7 @@ namespace bootcamp
             // lab6Instance.problem3();
             // lab6Instance.problem4();
             // lab6Instance.problem5();
-            lab6Instance.problem6();
+            // lab6Instance.problem6();
         }
     }
 }
