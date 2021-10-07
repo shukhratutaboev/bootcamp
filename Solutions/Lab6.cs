@@ -92,5 +92,90 @@ namespace bootcamp.Solutions
                 Console.Write("\n");
             }
         }
+        public void problem7()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 1; j <= 10; j++)
+                {
+                    Console.Write((j + i) % 10 + " ");
+                }
+                Console.WriteLine("");
+            }
+        }
+        public void problem8()
+        {
+
+        }
+        public void problem9()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int p = 1;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = n - 1 - i; j > 0; j--)
+                {
+                    Console.Write(' ');
+                }
+                for (int k = 0; k < i + 1; k++)
+                {
+                    Console.Write(p % 10 + " ");
+                    p++;
+                }
+                Console.Write("\n");
+            }
+        }
+        public void problem10()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int sum;
+            int x;
+            while(n > 9)
+            {
+                x = n;
+                sum = 0;
+                while (x >= 1)
+                {
+                    sum += x % 10;
+                    x /= 10;
+                }
+                n = sum;
+            }
+            Console.WriteLine(n);
+        }
+        public void problem11()
+        {
+
+        }
+        public void problem12()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int x = 1;
+            int sum = 0;
+            while(true)
+            {
+                sum += x;
+                if(x == n)
+                {
+                    break;
+                }
+                x++;
+            }
+            Console.WriteLine(sum);
+        }
+        public void problem13()
+        {
+            var s = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+            float sum = 0, a;
+            int n = 0;
+            foreach (int i in s)
+            {
+                sum += i;
+                n++;
+            }
+            a = (sum) / (n - 1);
+
+            Console.WriteLine(sum + " " + a.ToString("0.00") + " " + (n-1));
+        }
     }
 }
